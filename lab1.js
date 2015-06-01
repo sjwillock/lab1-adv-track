@@ -55,6 +55,8 @@ assert(1 === 2, 'this is an assertion failure example. 1 === 2');
 */
 
 //your code goes here
+assert("lion" != "tiger");
+assert("zebra" === "Zebra", 'this assertion failed because === requires both exprssions to be exactly the same');
 
 /* ----------------- Meerkats -------------------------------------------------
  Meerkats make a sort of chirping noise (according to my 30 seconds of
@@ -73,6 +75,19 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 */
 
 //your code goes here
+sentence1 = sentence1.split(" ");
+var i = 0;
+while (i < 3) {
+  sentence1[i] = "chirp";
+  i++;
+}
+sentence1 = sentence1.join(" ") + ".";
+
+sentence2 = sentence2.split(" ");
+for (i = 0; i < sentence2.length; i++) {
+  sentence2[i] = "chirp";
+}
+sentence2 = sentence2.join(" ") + ".";
 
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
@@ -92,6 +107,12 @@ var nextAnimal;
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
 // your code goes here
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+nextAnimal = favoriteAnimals[getRandomInt(0, 3)];
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
@@ -119,6 +140,23 @@ var tooHungryDay;
 */
 
 // your code goes here
+
+var avgMealsPerDay = 0;
+var totalMeals = 0;
+
+for (var i = 0; i < mealsPerDay.length; i++) {
+  var currentDay = i + 1;
+
+  totalMeals = totalMeals + mealsPerDay[i];
+  avgMealsPerDay = totalMeals / currentDay;
+
+  if (avgMealsPerDay >= 4) {
+    console.log(avgMealsPerDay);
+  } else {
+    break;
+}
+}
+tooHungryDay = currentDay;
 
 assert(tooHungryDay, 'remember to assign the answer to tooHungryDay');
 assert(tooHungryDay < 10, 'the lion is too hungry before the end of the array');
