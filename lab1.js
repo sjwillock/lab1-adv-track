@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* LAB 1: A Trip to Woodland Park Zoo
 
@@ -29,7 +29,7 @@
 
 function assert(expression, failureMessage) {
   if (!expression) {
-    console.log('assertion failure: ', failureMessage);
+    console.log("assertion failure: ", failureMessage);
   }
 }
 
@@ -44,7 +44,7 @@ function assert(expression, failureMessage) {
 */
 
 assert(1 === 1);
-assert(1 === 2, 'this is an assertion failure example. 1 === 2');
+assert(1 === 2, "this is an assertion failure example. 1 === 2");
 
 /*------------------Assertions-------------------------------------------------
  TODO: 8 points
@@ -56,15 +56,15 @@ assert(1 === 2, 'this is an assertion failure example. 1 === 2');
 
 //your code goes here
 assert("lion" != "tiger");
-assert("zebra" === "Zebra", 'this assertion failed because === requires both exprssions to be exactly the same');
+assert("zebra" === "Zebra", "this assertion failed b/c JS is case sensitive");
 
 /* ----------------- Meerkats -------------------------------------------------
  Meerkats make a sort of chirping noise (according to my 30 seconds of
  research).  We're going to translate two sentences into meerkat speech.
 */
 
-var sentence1 = 'More food please.';
-var sentence2 = 'Come over here so you can scratch my belly.';
+var sentence1 = "More food please.";
+var sentence2 = "Come over here so you can scratch my belly.";
 
 /*
  TODO: 20 points
@@ -89,9 +89,9 @@ for (i = 0; i < sentence2.length; i++) {
 }
 sentence2 = sentence2.join(" ") + ".";
 
-assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
-assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
-  'sentence 2 should have 9 chirps');
+assert(sentence1 === "chirp chirp chirp.", "sentence 1 should have 3 chirps");
+assert(sentence2 === "chirp chirp chirp chirp chirp chirp chirp chirp chirp.",
+  "sentence 2 should have 9 chirps");
 
 /* ----------------- Favorite Animals ----------------------------------------
  The zoo is closing in 20 minutes. You still haven't seen your four favorite
@@ -100,7 +100,7 @@ assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
  Hint: read the Math.random description on MDN.
 */
 
-var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
+var favoriteAnimals = [ "elephant", "penguin", "eagle", "camel" ];
 var nextAnimal;
 
 // TODO: 12 points
@@ -114,7 +114,7 @@ function getRandomInt(min, max) {
 
 nextAnimal = favoriteAnimals[getRandomInt(0, 3)];
 
-assert(nextAnimal, 'assign something to nextAnimal');
+assert(nextAnimal, "assign something to nextAnimal");
 
 /* ----------------- Hungry Lion ----------------------------------------
  As long as the lion is well-fed, he doesn't take too much heed of the
@@ -127,7 +127,7 @@ assert(nextAnimal, 'assign something to nextAnimal');
 */
 
 // number of times the new caretaker fed the lion. one array entry per day
-var mealsPerDay = [5, 4, 3, 6, 2, 4, 3, 4, 5, 1];
+var mealsPerDay = [ 5, 4, 3, 6, 2, 4, 3, 4, 5, 1 ];
 var tooHungryDay;
 
 /*
@@ -158,8 +158,8 @@ for (var i = 0; i < mealsPerDay.length; i++) {
 }
 tooHungryDay = currentDay;
 
-assert(tooHungryDay, 'remember to assign the answer to tooHungryDay');
-assert(tooHungryDay < 10, 'the lion is too hungry before the end of the array');
+assert(tooHungryDay, "remember to assign the answer to tooHungryDay");
+assert(tooHungryDay < 10, "the lion is too hungry before the end of the array");
 
 /* ----------------- Code Style ----------------------------------------
  TODO: 10 points
